@@ -110,7 +110,7 @@ class search_movie:
 
                 # calling the script.                              $1        $2        $3      $4        $5   $6   $7   $8   $9
                 proc = subprocess.Popen(
-                    ["./sudo-search-video-gtk-version.sh", search_txt, check_case, root, all_formats, mp4, pdf, avi,
+                    ["./search-video-gtk-version.sh", search_txt, check_case, root, all_formats, mp4, pdf, avi,
                      mkv, pwd],
                     stdout=subprocess.PIPE)
 
