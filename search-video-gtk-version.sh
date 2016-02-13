@@ -21,6 +21,9 @@ pdf=$6
 avi=$7
 mkv=$8
 
+
+pwd=$9
+
 #<<COMMENT 
 
 #whether to ignore cases or not.
@@ -132,12 +135,13 @@ i=0;
 #<<"COMMENT"
 
 
+
 # function that receives an extension and serches files having it.
 search_this_extension(){
 	# sent extension is $1
 	extension=$1
 	# append the result of the find command to the text file.
-	find $root_dir $case_or_not "*$file_name*.$extension" >> /home/$USER/gtk-search.txt
+	echo $pwd | sudo -S find $root_dir -type f $case_or_not "*$file_name*.$extension" >> /home/$USER/gtk-search.txt
 }
 
 
